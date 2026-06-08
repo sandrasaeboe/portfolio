@@ -1,13 +1,36 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background: #f2f0eb;
+  color: #0a0a0a;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* { cursor: none !important; }
+::selection { background: #0a0a0a; color: #000000; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; border: none; background: none; }
+::-webkit-scrollbar { width: 2px; }
+::-webkit-scrollbar-track { background: #979695; }
+::-webkit-scrollbar-thumb { background: #1d1d1d; }
+
+/* Glitch on name — subtle, fires every ~9s */
+@keyframes g1 {
+  0%,87%,100%{clip-path:inset(50% 0 49% 0);opacity:0;}
+  89%{clip-path:inset(12% 0 67% 0);opacity:.4;transform:translate(-3px,0);}
+  92%{clip-path:inset(73% 0 6% 0);opacity:.3;transform:translate(2px,0);}
 }
+@keyframes g2 {
+  0%,87%,100%{clip-path:inset(50% 0 49% 0);opacity:0;}
+  90%{clip-path:inset(65% 0 14% 0);opacity:.3;transform:translate(3px,0);}
+  93%{clip-path:inset(5% 0 78% 0);opacity:.25;transform:translate(-2px,0);}
+}
+
+@keyframes spin  { to { transform:rotate(360deg); } }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+@keyframes slideUp { from{opacity:0;transform:translateY(32px)} to{opacity:1;transform:none} }
+@keyframes lineGrow { from{transform:scaleX(0)} to{transform:scaleX(1)} }

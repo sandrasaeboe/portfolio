@@ -1,0 +1,33 @@
+export const personal = {
+  name: 'Sandra Sæbø', initials: 'SS',
+  role: 'Interaction Designer & Web Developer',
+  bio: "Bachelor's in Interaction Design & Web Development. Studied fashion design at Beckmans.",
+  bio2: "An eye for digital form — where every detail is intentional.",
+  location: 'Stockholm', email: 'sandra.saeboe@gmail.com',
+  github: 'https://github.com/sandrasaeboe', linkedin: 'https://www.linkedin.com/in/sandra-sæbø-08556b270/',
+  available: 'June 2026',
+};
+
+export const projects = [
+  { id:1, index:'01', title:'Silhouette', role:'Creative Direction, Generative Code', year:'2024',
+    desc:'A generative typography tool that translates fashion silhouettes into letterforms. Draw a garment outline — the algorithm maps its drape, tension and curvature onto a live variable type system.',
+    tech:['Canvas API','SVG Paths','Variable Fonts','React'], what:'Where fashion drawing becomes living type.', link: 'https://silhouette-coral.vercel.app' },
+  { id:2, index:'02', title:'Motion', role:'Component Design, Frontend Engineering', year:'2026',
+    desc:'A physics-based UI component library. Every component driven by spring physics and inertia. Fully documented with TypeScript types and live demos.',
+    tech:['React','TypeScript','Spring Physics','Storybook'], what:'UI that moves like it has mass.', link:'https://motion-ui-that-moves.vercel.app' },
+  { id:3, index:'03', title:'Spiral', role:'UX Design, Full Stack Development', year:'2026',
+    desc:'Comming soon',
+    tech:['React','SVG Charts','REST APIs','Design System'], what:'', link:'#' },
+];
+
+export const skills = [
+  { cat:'Design',   items:['Figma','Interaction Design','UX / UI Design','Adobe Creative Suite','Prototyping','Design Systems','Editorial Design','Typography'] },
+  { cat:'Frontend', items:['React','TypeScript','CSS / SCSS','Three.js','Canvas API'] },
+  { cat:'Process',  items:['UX Research', 'User Testing', 'Information Architecture', 'Accessibility', 'Git', 'Iterative Design'] },
+];
+
+export const experience = [
+  { role:'UX Design',   company:'CozyVintage', period:'2021 - 2022', desc:'Designed and developed the company website, focusing on layout, visual structure, and user experience. Supported digital marketing through content and visual updates.' },
+  { role:'Frontend Developer', company:'Freelance',    period:'2023 – Now',  desc:'Built websites for businesses. Full ownership from wireframe to deployed product.' },
+  
+];
