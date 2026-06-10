@@ -4,7 +4,7 @@ export const personal = {
   bio: "Bachelor's in Interaction Design & Web Development. Studied fashion design at Beckmans.",
   bio2: "An eye for digital form — where every detail is intentional.",
   location: 'Stockholm', email: 'sandra.saeboe@gmail.com',
-  github: 'https://github.com/sandrasaeboe', linkedin: 'https://www.linkedin.com/in/sandra-sæbø-08556b270/',
+  github: 'https://github.com/sandrasaeboe', linkedin: 'https://www.linkedin.com/in/sandra-sæbø-08556b270/ç',
   available: 'June 2026',
 };
 

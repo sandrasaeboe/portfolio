@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <>
       <nav style={{position:'fixed',top:0,left:0,right:0,zIndex:500,display:'flex',alignItems:'center',justifyContent:'space-between',padding:'0 48px',height:s?52:68,background:s?'rgba(242,240,235,0.97)':'transparent',borderBottom:s?'1px solid rgba(10,10,10,0.1)':'1px solid transparent',backdropFilter:s?'blur(16px)':'none',transition:'all .4s cubic-bezier(0.16,1,0.3,1)'}}>
-        <a href="#" style={{fontSize:13,letterSpacing:'0.18em',textTransform:'uppercase',fontWeight:700,color:'#0a0a0a'}}>{personal.initials}</a>
+        <a href="/" style={{fontSize:13,letterSpacing:'0.18em',textTransform:'uppercase',fontWeight:700,color:'#0a0a0a'}}>{personal.initials}</a>
         <div style={{display:'flex',gap:36,alignItems:'center'}} className="nd">
           {L.map(([l,h])=>(
             <a key={h} href={h} style={{fontSize:13,color:'rgba(10,10,10,0.45)',transition:'color .2s'}} onMouseEnter={e=>e.target.style.color='#0a0a0a'} onMouseLeave={e=>e.target.style.color='rgba(10,10,10,0.45)'}>{l}</a>
