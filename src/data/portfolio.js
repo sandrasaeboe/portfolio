@@ -4,8 +4,8 @@ export const personal = {
   bio: "Bachelor's in Interaction Design & Web Development. Studied fashion design at Beckmans.",
   bio2: "An eye for digital form — where every detail is intentional.",
   location: 'Stockholm', email: 'sandra.saeboe@gmail.com',
-  github: 'https://github.com/sandrasaeboe', linkedin: 'https://www.linkedin.com/in/sandra-sæbø-08556b270/ç',
-  available: 'June 2026',
+  github: 'https://github.com/sandrasaeboe', linkedin: 'https://www.linkedin.com/in/sandra-sæbø-08556b270/',
+  available: 'Now',
 };
 
 export const projects = [
@@ -16,8 +16,8 @@ export const projects = [
     desc:'A physics-based UI component library. Every component driven by spring physics and inertia. Fully documented with TypeScript types and live demos.',
     tech:['React','TypeScript','Spring Physics','Storybook'], what:'UI that moves like it has mass.', link:'https://motion-ui-that-moves.vercel.app' },
   { id:3, index:'03', title:'Spiral', role:'UX Design, Full Stack Development', year:'2026',
-    desc:'Comming soon',
-    tech:['React','SVG Charts','REST APIs','Design System'], what:'', link:'https://spiral-app-ss.vercel.app' },
+    desc:'A mental health app that catches spiraling thoughts before they take over. An AI layer reads what you write and offers grounding advice in the moment, while daily check-ins track energy, sleep and mood to surface patterns over time. A guided breathing exercise helps regulate the nervous system when things feel like too much.',
+    tech:['React','AI-Assisted Insights','Data Visualization','Design System'], what:'A pause, built into the spiral.', link:'https://spiral-app-ss.vercel.app' },
 ];
 
 export const skills = [

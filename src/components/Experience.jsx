@@ -30,7 +30,7 @@ export default function Experience() {
       {experience.map((item,i) => <Row key={i} item={item} i={i} />)}
       <div style={{ borderBottom:'1px solid rgba(10,10,10,0.1)', padding:'44px 48px', display:'grid', gridTemplateColumns:'180px 1fr', gap:'0 64px', background:'rgba(10,10,10,0.01)' }}>
         <div>
-          <p style={{ fontSize:13, color:'rgba(10,10,10,0.45)', marginBottom:6 }}>202 – 2026</p>
+          <p style={{ fontSize:13, color:'rgba(10,10,10,0.45)', marginBottom:6 }}>2022 – 2026</p>
           <p style={{ fontSize:13, color:'rgba(10,10,10,0.45)' }}>University</p>
         </div>
         <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', flexWrap:'wrap', gap:16 }}>

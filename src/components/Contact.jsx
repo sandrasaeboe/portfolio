@@ -1,26 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { personal } from '../data/portfolio';
 import useInView from '../hooks/useInView';
 
-function Field({ label, name, value, onChange, multiline, focused, onFocus, onBlur }) {
-  const Tag = multiline ? 'textarea' : 'input';
-  return (
-    <div style={{ marginBottom:32 }}>
-      <label style={{ fontSize:11, letterSpacing:'0.16em', textTransform:'uppercase', color:focused?'#0a0a0a':'rgba(10,10,10,0.4)', display:'flex', justifyContent:'space-between', marginBottom:10, transition:'color .2s' }}>
-        {label} {value && <span>✓</span>}
-      </label>
-      <Tag name={name} value={value} onChange={onChange} onFocus={onFocus} onBlur={onBlur} required rows={multiline?5:undefined}
-        style={{ width:'100%', background:'transparent', border:'none', borderBottom:`1px solid ${focused?'rgba(10,10,10,0.6)':'rgba(10,10,10,0.15)'}`, color:'#0a0a0a', fontFamily:'Helvetica Neue,sans-serif', fontSize:17, fontWeight:300, padding:'12px 0', outline:'none', resize:multiline?'vertical':'none', transition:'border-color .25s' }} />
-    </div>
-  );
-}
-
 export default function Contact() {
   const [eRef,eIn] = useInView(0.05), [fRef,fIn] = useInView(0.05);
-  const [form,setForm] = useState({name:'',email:'',message:''});
-  const [foc,setFoc] = useState(null), [status,setStatus] = useState('idle');
-  const change = e => setForm(p=>({...p,[e.target.name]:e.target.value}));
-  const submit = async e => { e.preventDefault(); setStatus('loading'); await new Promise(r=>setTimeout(r,1200)); setStatus('success'); };
 
   return (
     <section id="contact" style={{ borderTop:'1px solid rgba(10,10,10,0.1)', paddingTop:120, paddingBottom:100 }}>
@@ -39,27 +22,18 @@ export default function Contact() {
         </a>
       </div>
 
-      {/* Form */}
+      {/* CTA */}
       <div ref={fRef} style={{ padding:'0 48px', display:'grid', gridTemplateColumns:'1fr 1fr', gap:'0 100px', opacity:fIn?1:0, transform:fIn?'none':'translateY(16px)', transition:'all .9s .1s cubic-bezier(0.16,1,0.3,1)' }}>
         <div>
-          {status === 'success' ? (
-            <div>
-              <h3 style={{ fontSize:48, fontWeight:700, letterSpacing:'-0.04em', textTransform:'uppercase', marginBottom:16 }}>Sent.</h3>
-              <p style={{ fontSize:16, color:'rgba(10,10,10,0.55)', fontWeight:300 }}>I'll reply within 24 hours.</p>
-            </div>
-          ) : (
-            <form onSubmit={submit}>
-              <Field label="Name"    name="name"    value={form.name}    onChange={change} focused={foc==='name'}    onFocus={()=>setFoc('name')}    onBlur={()=>setFoc(null)} />
-              <Field label="Email"   name="email"   value={form.email}   onChange={change} focused={foc==='email'}   onFocus={()=>setFoc('email')}   onBlur={()=>setFoc(null)} />
-              <Field label="Message" name="message" value={form.message} onChange={change} focused={foc==='message'} onFocus={()=>setFoc('message')} onBlur={()=>setFoc(null)} multiline />
-              <button type="submit" disabled={status==='loading'}
-                style={{ marginTop:8, width:'100%', padding:'16px', background:status==='loading'?'rgba(10,10,10,0.4)':'#0a0a0a', color:'#f2f0eb', fontSize:12, letterSpacing:'0.18em', textTransform:'uppercase', fontWeight:500, display:'flex', alignItems:'center', justifyContent:'center', gap:10, transition:'opacity .2s' }}
-                onMouseEnter={e=>{if(status!=='loading')e.currentTarget.style.opacity='.75'}} onMouseLeave={e=>e.currentTarget.style.opacity='1'}>
-                {status==='loading'?<><span style={{width:12,height:12,border:'1.5px solid rgba(242,240,235,0.3)',borderTopColor:'#f2f0eb',borderRadius:'50%',display:'inline-block',animation:'spin .7s linear infinite'}}/>Sending</>:'Send message'}
-              </button>
-              <p style={{ marginTop:12, fontSize:12, color:'rgba(10,10,10,0.3)', letterSpacing:'0.06em' }}>*Connect to Formspree to activate.</p>
-            </form>
-          )}
+          <h3 style={{ fontSize:'clamp(28px,4vw,48px)', fontWeight:700, letterSpacing:'-0.04em', textTransform:'uppercase', marginBottom:16 }}>Let's talk.</h3>
+          <p style={{ fontSize:16, color:'rgba(10,10,10,0.55)', fontWeight:300, lineHeight:1.7, marginBottom:32, maxWidth:380 }}>
+            Reach out directly — I read every message and reply within 24 hours.
+          </p>
+          <a href={`mailto:${personal.email}`}
+            style={{ display:'inline-flex', alignItems:'center', gap:10, padding:'16px 32px', background:'#0a0a0a', color:'#f2f0eb', fontSize:12, letterSpacing:'0.18em', textTransform:'uppercase', fontWeight:500, transition:'opacity .2s' }}
+            onMouseEnter={e=>e.currentTarget.style.opacity='.75'} onMouseLeave={e=>e.currentTarget.style.opacity='1'}>
+            Email me ↗
+          </a>
         </div>
         <div style={{ display:'flex', flexDirection:'column', justifyContent:'space-between', paddingBottom:8 }}>
           <div>
