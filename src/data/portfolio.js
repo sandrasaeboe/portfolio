@@ -14,10 +14,10 @@ export const projects = [
     tech:['Canvas API','SVG Paths','Variable Fonts','React'], what:'Where fashion drawing becomes living type.', link: 'https://silhouette-coral.vercel.app' },
   { id:2, index:'02', title:'Motion', role:'Component Design, Frontend Engineering', year:'2026',
     desc:'A physics-based UI component library. Every component driven by spring physics and inertia. Fully documented with TypeScript types and live demos.',
-    tech:['React','TypeScript','Spring Physics','Storybook'], what:'UI that moves like it has mass.', link:'https://spiral-app-ss.vercel.app' },
+    tech:['React','TypeScript','Spring Physics','Storybook'], what:'UI that moves like it has mass.', link:'https://motion-ui-that-moves.vercel.app' },
   { id:3, index:'03', title:'Spiral', role:'UX Design, Full Stack Development', year:'2026',
     desc:'Comming soon',
-    tech:['React','SVG Charts','REST APIs','Design System'], what:'', link:'#' },
+    tech:['React','SVG Charts','REST APIs','Design System'], what:'', link:'https://spiral-app-ss.vercel.app' },
 ];
 
 export const skills = [
