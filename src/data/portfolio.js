@@ -9,9 +9,9 @@ export const personal = {
 };
 
 export const projects = [
-  { id:1, index:'01', title:'Silhouette', role:'Creative Direction, Generative Code', year:'2024',
-    desc:'A generative typography tool that translates fashion silhouettes into letterforms. Draw a garment outline — the algorithm maps its drape, tension and curvature onto a live variable type system.',
-    tech:['Canvas API','SVG Paths','Variable Fonts','React'], what:'Where fashion drawing becomes living type.', link: 'https://silhouette-coral.vercel.app' },
+  { id:1, index:'01', title:'Emelinn', role:'Web Design, Frontend Development', year:'2026',
+    desc:'An editorial portfolio site for a Stockholm-based fine-line tattoo artist. A monochrome, gallery-first experience built around an infinite-looping coverflow gallery and a direct, form-free booking flow.',
+    tech:['React','CSS','Scroll Snap Carousel','Responsive Design'], what:"A quiet gallery for ink that's meant to last.", link: 'https://emelinn.vercel.app' },
   { id:2, index:'02', title:'Motion', role:'Component Design, Frontend Engineering', year:'2026',
     desc:'A physics-based UI component library. Every component driven by spring physics and inertia. Fully documented with TypeScript types and live demos.',
     tech:['React','TypeScript','Spring Physics','Storybook'], what:'UI that moves like it has mass.', link:'https://motion-ui-that-moves.vercel.app' },
