@@ -9,7 +9,7 @@ export const personal = {
 };
 
 export const projects = [
-  { id:1, index:'01', title:'Emelinn', role:'Web Design, Frontend Development', year:'2026',
+  { id:1, index:'01', title:'Webdesign', role:'Web Design, Frontend Development', year:'2026',
     desc:'An editorial portfolio site for a Stockholm-based fine-line tattoo artist. A monochrome, gallery-first experience built around an infinite-looping coverflow gallery and a direct, form-free booking flow.',
     tech:['React','CSS','Scroll Snap Carousel','Responsive Design'], what:"A quiet gallery for ink that's meant to last.", link: 'https://emelinn.vercel.app' },
   { id:2, index:'02', title:'Motion', role:'Component Design, Frontend Engineering', year:'2026',
